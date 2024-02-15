@@ -25,6 +25,13 @@ Outro tipo de seletor CSS que podemos usar é o **seletor de id** (identificador
 }
 ```
 
+Agora o tipo mais comum de seletor é o **seletor de classe**, um seletor de classe serve para estilizarmos elementos pertencentes a mesma classe, e diferente do `ìd` não é único. Sua sintaxe é a seguinte:
+```css
+.class-name {
+    styles;
+}
+```
+
 ## Vinculação do CSS ao HTML
 Para vincular uma folha de estilos ao nosso HTML, devemos adicionar ao elemento `<head></head>` uma tag chamada `<link>` os seguintes atributos: **href** com o valor do caminho de onde está localizada nossa folha de estilos, e **rel** com o valor `"stylesheet"`.
 
@@ -37,10 +44,57 @@ Esse metadado serve para que a estilização da página **pareça semelhante, in
 Para alinhar nossos elementos de texto do HTML, temos a propriedade `text-align`, que possui valores como **center, justify, right e left**.
 
 ## Background
-Para estilizarmos o fundo ou corpo de um elemento, possuimos a propriedade `background-color`.
+Para estilizarmos o fundo ou corpo de um elemento, possuimos diversas propriedades:
+- `background-color`: Que permite estilizar a cor do fundo do elemento;
+- `background-image`: Que permite que o fundo de um elemento seja uma imagem.
 
-## Div
-Apesar de ser um elemento HTML, o elemento `div` é diferente dos elementos semânticos, ele é usado principalmente para **fins de layout de design**.
+```css
+body {
+    background-color: #000000;
+    background-image: url(path to img);
+}
+```
 
 ## Largura dos elementos
 Para tratarmos a largura de um elemento, devemos usar a propriedade `width`, com ela podemos definir exatamente a largura que o elemento vai ter e ocupar na página.
+
+## Comentários em CSS
+Sintaxe:
+```css
+/* Comentários */
+```
+
+## Margem de um Elemento
+No CSS temos a propriedade `margin` que como seu próprio nome diz, define a margem do elemento, é como um **espaço invisível em torno do elemento**.
+
+Um exemplo de uso para a `margin` é centralizar um elemento horizontalmente:
+```css
+#menu {
+    margin-left: auto;
+    margin-right: auto;
+}
+```
+
+# Dicionário HTML
+
+## Div
+O elemento `<div></div>` é diferente dos elementos semânticos, ele é usado principalmente para **fins de layout de design** e organização do código.
+```html
+<div class="apresentacao_links">
+    <a href=""> Google </a>
+    <a href=""> Bing </a>
+</div>
+```
+
+## Article
+Elemetos `<article></article>` geralmente guardam elementos que possuem **informações relacionadas**. Por exemplo, o nome e o preço de um produto.
+```html
+<article>
+   <p> Fiat Uno </p>
+   <p> R$ 20.000,00 </p> 
+</article>
+<article>
+   <p> Fiat Siena </p>
+   <p> R$ 50.000,00 </p> 
+</article>
+```
